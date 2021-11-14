@@ -10,6 +10,9 @@ import { CounterComponent } from './counter/counter.component';
 import { PostsComponent } from './posts/posts.component';
 import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
 import { CounterButtonComponent } from './counter/counter-button/counter-button.component';
+import { counterReducer } from './counter/store/counter.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import { CounterButtonComponent } from './counter/counter-button/counter-button.
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      
+      counter:counterReducer
+    }),
+    StoreDevtoolsModule.instrument({
+      logOnly: environment.production,
+      autoPause: true,
     })
   ],
   providers: [],
