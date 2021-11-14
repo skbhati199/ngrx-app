@@ -15,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { CustomInputCounterComponent } from './counter/custom-input-counter/custom-input-counter.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomChannelOutputComponent } from './custom-channel-output/custom-channel-output.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PostsComponent,
     CounterOutputComponent,
     CounterButtonComponent,
-    CustomInputCounterComponent
+    CustomInputCounterComponent,
+    CustomChannelOutputComponent
   ],
   imports: [
     BrowserModule,
